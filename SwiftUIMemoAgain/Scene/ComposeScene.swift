@@ -9,12 +9,12 @@ import SwiftUI
 
 struct ComposeScene: View {
     @EnvironmentObject var keyboard: KeyboardObserver
-    @EnvironmentObject var store: MemoStore
+    @EnvironmentObject var store: CoreDataManager
     @State private var content: String = ""
     
     @Binding var showComposer: Bool
     
-    var memo: Memo? = nil
+    var memo: MemoEntity? = nil
     
     var body: some View {
         NavigationView {
@@ -49,17 +49,17 @@ fileprivate struct DismissButton: View {
 
 fileprivate struct SaveButton: View {
     @Binding var show: Bool
-    @EnvironmentObject var store: MemoStore
+    @EnvironmentObject var store: CoreDataManager
     @Binding var content: String
     
-    var memo: Memo? = nil
+    var memo: MemoEntity? = nil
     
     var body: some View {
         Button(action: {
             if let memo = self.memo {
                 self.store.update(memo: memo, content: self.content)
             } else {
-                self.store.insert(memo: self.content)
+                self.store.addmemo(content: self.content)
             }
             
             self.show = false
@@ -72,7 +72,7 @@ fileprivate struct SaveButton: View {
 struct ComposeScene_Previews: PreviewProvider {
     static var previews: some View {
         ComposeScene(showComposer: .constant(false))
-            .environmentObject(MemoStore())
+            .environmentObject(CoreDataManager.shared)
             .environmentObject(KeyboardObserver())
     }
 }

@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct DetailScene: View {
-    @ObservedObject var memo: Memo
-    @EnvironmentObject var store: MemoStore
+    @ObservedObject var memo: MemoEntity
+    @EnvironmentObject var store: CoreDataManager
     @EnvironmentObject var formatter: DateFormatter
     
     @State private var showEditSheet = false
@@ -22,12 +22,12 @@ struct DetailScene: View {
             ScrollView {
                 VStack {
                     HStack {
-                        Text(self.memo.content)
+                        Text(self.memo.content ?? "")
                             .padding()
                         
                         Spacer()
                     }
-                    Text("\(self.memo.insertDate, formatter: formatter)")
+                    Text("\(self.memo.insertDate ?? Date(), formatter: formatter)")
                         .padding()
                         .font(.footnote)
                         .foregroundColor(Color(UIColor.secondaryLabel))
@@ -74,8 +74,8 @@ struct DetailScene: View {
 
 struct DetailScene_Previews: PreviewProvider {
     static var previews: some View {
-        DetailScene(memo: Memo(content: "SwiftUI"))
-            .environmentObject(MemoStore())
+        DetailScene(memo: MemoEntity(context: CoreDataManager.mainContext))
+            .environmentObject(CoreDataManager.shared)
             .environmentObject(DateFormatter.memoDateFormatter)
     }
 }
