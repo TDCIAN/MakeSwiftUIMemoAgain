@@ -9,23 +9,27 @@
 /* Begin PBXBuildFile section */
 		18BC0205264D185B00187C99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC0204264D185B00187C99 /* AppDelegate.swift */; };
 		18BC0207264D185B00187C99 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC0206264D185B00187C99 /* SceneDelegate.swift */; };
-		18BC0209264D185B00187C99 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC0208264D185B00187C99 /* ContentView.swift */; };
+		18BC0209264D185B00187C99 /* MemoListScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC0208264D185B00187C99 /* MemoListScene.swift */; };
 		18BC020C264D185B00187C99 /* SwiftUIMemoAgain.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18BC020A264D185B00187C99 /* SwiftUIMemoAgain.xcdatamodeld */; };
 		18BC020E264D185C00187C99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18BC020D264D185C00187C99 /* Assets.xcassets */; };
 		18BC0211264D185C00187C99 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18BC0210264D185C00187C99 /* Preview Assets.xcassets */; };
 		18BC0214264D185C00187C99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18BC0212264D185C00187C99 /* LaunchScreen.storyboard */; };
+		18BC021F264D19C500187C99 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC021E264D19C500187C99 /* Memo.swift */; };
+		18BC0223264D1A8200187C99 /* MemoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC0222264D1A8200187C99 /* MemoStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		18BC0201264D185B00187C99 /* SwiftUIMemoAgain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIMemoAgain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18BC0204264D185B00187C99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18BC0206264D185B00187C99 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		18BC0208264D185B00187C99 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		18BC0208264D185B00187C99 /* MemoListScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListScene.swift; sourceTree = "<group>"; };
 		18BC020B264D185B00187C99 /* SwiftUIMemoAgain.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SwiftUIMemoAgain.xcdatamodel; sourceTree = "<group>"; };
 		18BC020D264D185C00187C99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18BC0210264D185C00187C99 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		18BC0213264D185C00187C99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18BC0215264D185C00187C99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18BC021E264D19C500187C99 /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
+		18BC0222264D1A8200187C99 /* MemoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +62,10 @@
 		18BC0203264D185B00187C99 /* SwiftUIMemoAgain */ = {
 			isa = PBXGroup;
 			children = (
+				18BC021D264D19AE00187C99 /* Model */,
 				18BC0204264D185B00187C99 /* AppDelegate.swift */,
 				18BC0206264D185B00187C99 /* SceneDelegate.swift */,
-				18BC0208264D185B00187C99 /* ContentView.swift */,
+				18BC0208264D185B00187C99 /* MemoListScene.swift */,
 				18BC020D264D185C00187C99 /* Assets.xcassets */,
 				18BC0212264D185C00187C99 /* LaunchScreen.storyboard */,
 				18BC0215264D185C00187C99 /* Info.plist */,
@@ -76,6 +81,15 @@
 				18BC0210264D185C00187C99 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		18BC021D264D19AE00187C99 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				18BC021E264D19C500187C99 /* Memo.swift */,
+				18BC0222264D1A8200187C99 /* MemoStore.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,9 +163,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				18BC0205264D185B00187C99 /* AppDelegate.swift in Sources */,
+				18BC0223264D1A8200187C99 /* MemoStore.swift in Sources */,
 				18BC0207264D185B00187C99 /* SceneDelegate.swift in Sources */,
 				18BC020C264D185B00187C99 /* SwiftUIMemoAgain.xcdatamodeld in Sources */,
-				18BC0209264D185B00187C99 /* ContentView.swift in Sources */,
+				18BC0209264D185B00187C99 /* MemoListScene.swift in Sources */,
+				18BC021F264D19C500187C99 /* Memo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
