@@ -21,6 +21,7 @@
 		18BC0233264D210500187C99 /* ComposeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC0232264D210500187C99 /* ComposeScene.swift */; };
 		18BC0236264D275400187C99 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC0235264D275400187C99 /* TextView.swift */; };
 		18BC023A264D28A800187C99 /* KeyboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC0239264D28A800187C99 /* KeyboardObserver.swift */; };
+		18BC023E264D449900187C99 /* DetailScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC023D264D449900187C99 /* DetailScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		18BC0232264D210500187C99 /* ComposeScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeScene.swift; sourceTree = "<group>"; };
 		18BC0235264D275400187C99 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		18BC0239264D28A800187C99 /* KeyboardObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardObserver.swift; sourceTree = "<group>"; };
+		18BC023D264D449900187C99 /* DetailScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 				18BC022B264D203E00187C99 /* View */,
 				18BC0208264D185B00187C99 /* MemoListScene.swift */,
 				18BC0232264D210500187C99 /* ComposeScene.swift */,
+				18BC023D264D449900187C99 /* DetailScene.swift */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 				18BC023A264D28A800187C99 /* KeyboardObserver.swift in Sources */,
 				18BC0207264D185B00187C99 /* SceneDelegate.swift in Sources */,
 				18BC0228264D1E3800187C99 /* DateFormatter+Memo.swift in Sources */,
+				18BC023E264D449900187C99 /* DetailScene.swift in Sources */,
 				18BC020C264D185B00187C99 /* SwiftUIMemoAgain.xcdatamodeld in Sources */,
 				18BC0209264D185B00187C99 /* MemoListScene.swift in Sources */,
 				18BC021F264D19C500187C99 /* Memo.swift in Sources */,
