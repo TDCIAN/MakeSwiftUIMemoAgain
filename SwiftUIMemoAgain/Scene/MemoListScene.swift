@@ -22,6 +22,7 @@ struct MemoListScene: View {
             .navigationBarItems(trailing: ModalButton(show: $showComposer))
             .sheet(isPresented: $showComposer, content: {
                 ComposeScene(showComposer: self.$showComposer)
+                    .environmentObject(self.store)
             })
         }
     }
@@ -41,9 +42,14 @@ fileprivate struct ModalButton: View {
 
 struct MemoListScene_Previews: PreviewProvider {
     static var previews: some View {
-        MemoListScene()
-            .environmentObject(MemoStore())
-            .environmentObject(DateFormatter.memoDateFormatter)
+        Group {
+            MemoListScene()
+                .environmentObject(MemoStore())
+                .environmentObject(DateFormatter.memoDateFormatter)
+            MemoListScene()
+                .environmentObject(MemoStore())
+                .environmentObject(DateFormatter.memoDateFormatter)
+        }
     }
 }
 
