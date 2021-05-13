@@ -16,8 +16,8 @@ struct ComposeScene: View {
     var body: some View {
         NavigationView {
             VStack {
-                TextField("", text: $content)
-                    .background(Color.yellow)
+                TextView(text: $content)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .navigationBarTitle("새 메모", displayMode: .inline)
